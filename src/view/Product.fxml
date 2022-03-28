@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductController">
+   <children>
+      <Pane nodeOrientation="LEFT_TO_RIGHT" opacity="0.73" prefHeight="666.0" prefWidth="892.0" style="-fx-background-color: #4D8076;">
+         <children>
+            <TableView fx:id="tableProduct" layoutX="433.0" layoutY="130.0" onMouseClicked="#tableProduct" prefHeight="224.0" prefWidth="445.0" style="-fx-background-color: #2F6951;">
+              <columns>
+                <TableColumn prefWidth="102.39996337890625" text="Product Id" />
+                <TableColumn prefWidth="96.800048828125" text="Product Name" />
+                  <TableColumn prefWidth="111.20001220703125" text="Product Qty" />
+                  <TableColumn prefWidth="132.7999267578125" text="Product Price" />
+              </columns>
+            </TableView>
+            <Pane layoutX="14.0" layoutY="130.0" prefHeight="490.0" prefWidth="376.0" style="-fx-background-color: #2F6951;">
+               <children>
+                  <TextField fx:id="txtProID" layoutX="24.0" layoutY="31.0" onAction="#searchPro" prefHeight="48.0" prefWidth="329.0" promptText="ProductID" style="-fx-background-color: balck; -fx-border-color: black;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="14.0" layoutY="403.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="48.0" prefWidth="107.0" style="-fx-background-color: green;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="255.0" layoutY="404.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="46.0" prefWidth="107.0" style="-fx-background-color: red;" text="Delete" textFill="#ffefef">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="134.0" layoutY="404.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="46.0" prefWidth="107.0" style="-fx-background-color: blue;" text="Update" textFill="#fffcfc">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txtProName" layoutX="24.0" layoutY="104.0" prefHeight="48.0" prefWidth="329.0" promptText="ProductName" style="-fx-background-color: balck; -fx-border-color: black;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtProqty" layoutX="24.0" layoutY="176.0" prefHeight="48.0" prefWidth="329.0" promptText="ProductQty" style="-fx-background-color: balck; -fx-border-color: black;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtProPrice" layoutX="24.0" layoutY="254.0" prefHeight="48.0" prefWidth="329.0" promptText="ProductunitPrice" style="-fx-background-color: balck; -fx-border-color: black;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane layoutX="-7.0" prefHeight="95.0" prefWidth="899.0" style="-fx-background-color: #2F6951;">
+               <children>
+                  <Text fill="#d40909" layoutX="331.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="62.0" />
+                     </font>
+                  </Text>
+                  <Button contentDisplay="GRAPHIC_ONLY" layoutX="24.0" layoutY="10.0" mnemonicParsing="false" onKeyReleased="#btnHome" prefHeight="75.0" prefWidth="81.0" style="-fx-background-color: #2F6951; -fx-border-color: #4D8076;">
+                     <graphic>
+                        <ImageView fitHeight="58.0 " fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/25694.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children></Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
